@@ -1,0 +1,9 @@
+toast_cases:
+  - type: "success"
+    expected_message: "Success"
+  - type: "error"
+    expected_message: "Error"
+  - type: "warning"
+    expected_message: "Warning"
+  - type: "info"
+    expected_message: "Info"

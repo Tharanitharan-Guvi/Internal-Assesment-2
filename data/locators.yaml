@@ -1,0 +1,5 @@
+toast_messages:
+  success: '//*[@id="success"]'
+  error: '//*[@id="error"]'
+  warning: '//*[@id="warning"]'
+  info: '//*[@id="info"]'
