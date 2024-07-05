@@ -6,7 +6,7 @@ from pages.toast import Toast
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture()
 def driver():
     """
     to initialize and quit the WebDriver
@@ -16,13 +16,13 @@ def driver():
     yield driver
     driver.quit()
 
-@pytest.fixture(scope="module")
+@pytest.fixture()
 def test_data():
     """
     to load test data from a YAML file
     :return:
     """
-    with open('data/test_data.yaml', 'r') as file:
+    with open('../data/test_data.yaml', 'r') as file:
         return yaml.safe_load(file)
 
 def test_toast_messages(driver, test_data):
