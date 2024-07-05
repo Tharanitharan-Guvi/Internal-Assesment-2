@@ -38,6 +38,7 @@ def test_toast_messages(driver, test_data):
         expected_message = case['expected_message']
         actual_message = toast_page.get_toast_message(message_type)
         assert actual_message == expected_message, f"Expected: {expected_message}, Got: {actual_message}"
+        print(f"The expected message is {expected_message} and the actual message is {actual_message} and is they equal ? {actual_message == expected_message}")
 
 def test_negative_toast_messages(driver):
     """
