@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 class Toast:
     def __init__(self, driver):
         self.driver = driver
-        with open('data/locators.yaml', 'r') as file:
+        with open('../data/locators.yaml', 'r') as file:
             self.locators = yaml.safe_load(file)['toast_messages']
 
     def wait_for_element(self, by, value, timeout=10):
